@@ -606,7 +606,7 @@
 
 				$( '#swipebox-slider .slide' ).removeClass( 'current' );
 				$( '#swipebox-slider .slide' ).eq( index ).addClass( 'current' );
-				this.setTitle( index );
+				this.setTitle( elements[index] );
 
 				if ( isFirst ) {
 					slider.fadeIn();
@@ -692,13 +692,13 @@
 			/**
 			 * Set link title attribute as caption
 			 */
-			setTitle : function ( index ) {
+			setTitle : function ( element ) {
 				var title = null;
 
 				$( '#swipebox-title' ).empty();
 
-				if ( elements[ index ] !== undefined ) {
-					title = elements[ index ].title;
+				if ( element !== undefined ) {
+					title = element.title;
 				}
 
 				if ( title ) {
