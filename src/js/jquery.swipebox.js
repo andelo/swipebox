@@ -107,23 +107,14 @@
 					}
 
 					$elem.each( function() {
+					    var attrs = {}, item, name, value;
 
-						var title = null,
-							href = null;
-
-						if ( $( this ).attr( 'title' ) ) {
-							title = $( this ).attr( 'title' );
-						}
-
-
-						if ( $( this ).attr( 'href' ) ) {
-							href = $( this ).attr( 'href' );
-						}
-
-						elements.push( {
-							href: href,
-							title: title
-						} );
+					    for(var i = 0; i < this.attributes.length; i++){
+						item = this.attributes.item(i);
+						attrs[item.name] = item.value;
+					    }
+					    
+					    elements.push(attrs);
 					} );
 
 					index = $elem.index( $( this ) );
