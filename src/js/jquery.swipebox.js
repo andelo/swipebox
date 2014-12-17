@@ -163,10 +163,6 @@
 					} );
 				}
 
-				if ( isMobile ) {
-					$( '#swipebox-bottom-bar, #swipebox-top-bar' ).remove();
-				}
-
 				$.each( elements,  function() {
 					$( '#swipebox-slider' ).append( '<div class="slide"></div>' );
 				} );
